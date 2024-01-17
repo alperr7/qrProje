@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
     getInfo();
 
     animationController = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 1000000000));
+        vsync: this, duration: Duration(milliseconds: 5000));
 
     loginAnimationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 100));
@@ -224,17 +224,17 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
       offset: Offset(shakingAnimationValues.value, 0),
       child: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.all(55.0),
+          padding: const EdgeInsets.all(65.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Transform.rotate(
                 angle: rotateAnimationValues.value,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(200),
+                  borderRadius: BorderRadius.circular(350),
                   child: Image.asset(
                     "assets/images/biruni-logo.jpg",
-                    width: 200,
+                    width: 185,
                   ),
                 ),
               ),
